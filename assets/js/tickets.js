@@ -14,7 +14,7 @@ remove the checker and add DOM .ready method
 require("bootstrap");
 const createEl = require("./domMethods");
 
-$(document).ready(function () {
+if (window.location.href.indexOf("tickets") > -1) {
 
     const purchaseBtn = document.getElementById("purchaseBtn");
     const purchaseEmail = document.getElementById("purchaseEmail");
@@ -41,4 +41,4 @@ $(document).ready(function () {
     }
     purchaseBtn.addEventListener("click", purchaseTicket);
 
-})
+}
